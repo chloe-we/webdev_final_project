@@ -1,0 +1,92 @@
+/* Color variations */
+:root {
+    --main: #A8BBA3;
+    --text: black;
+    --bg: #DBDBDB;
+    --accent: #E7EFC7;
+}
+
+/* mobile first styling */
+
+/* general */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--bg);
+}
+
+/* header/nav styles */
+nav {
+    background-image: url('../assets/nav_sign.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color:var(--bg);
+    width: 100vw;
+    height: 200px;
+    margin: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    list-style-type: none;
+    border: .25px solid;
+    border-radius: 25px;
+    background-color: var(--main);
+    padding: .5em;
+}
+nav a {
+    text-decoration: none;
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav img {
+    width: 1rem;
+    padding-right: 3px;
+    margin: auto;
+}
+nav a span {
+    display: none;
+}
+
+/* main content */
+main {
+    background-color: var(--main);
+    padding: .5rem;
+    border-radius: 25px;
+    height: 100vh;
+    margin: 0;
+}
+.hero {
+    background: var(--accent);
+    margin: 2rem 1rem;
+    padding: .5rem 2rem;
+    border-radius: 12px;
+}
+h2 {
+    margin: 2rem 1rem;
+}
+
+
+/* media queries */
+@media (min-width: 400px) {
+    nav a span {
+        display: inline;
+    }
+}
+@media (min-width: 600px) {
+    main {
+        margin: 5%;
+    }
+}
