@@ -22,7 +22,7 @@ nav {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    background-color:var(--bg);
+    background-color:transparent;
     width: 100vw;
     height: 200px;
     margin: 2%;
@@ -78,6 +78,29 @@ h2 {
     margin: 2rem 1rem;
 }
 
+/* footer styles */
+footer {
+    text-align: center;
+    margin-top: 6vh;
+}
+#footer-div {
+    background-color: var(--accent);
+    margin-bottom: 0;
+    padding: 2%;
+}
+footer button {
+    margin-bottom: 6vh;
+    background-color: #EFD2AA;
+    border: solid #AF663D;
+    border-radius: 6px;
+    padding: 8px;
+}
+footer button a {
+    text-decoration: none;
+    color: var(--text)
+}
+
+
 
 /* media queries */
 @media (min-width: 400px) {
@@ -88,5 +111,11 @@ h2 {
 @media (min-width: 600px) {
     main {
         margin: 5%;
+    }
+}
+@media (min-width: 1000px) {
+    main {
+        max-width: 1000px;
+        margin: auto;
     }
 }
