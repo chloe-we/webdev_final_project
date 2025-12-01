@@ -18,7 +18,7 @@ body {
 
 /* header/nav styles */
 nav {
-    background-image: url('../assets/nav_sign.png');
+    background-image: url('../project_assets/nav_sign.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
