@@ -65,7 +65,7 @@ main {
     background-color: var(--main);
     padding: .5rem;
     border-radius: 25px;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
 }
 .hero {
