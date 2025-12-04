@@ -9,16 +9,19 @@
 /* mobile first styling */
 
 /* general */
-body {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+body {
     background-color: var(--bg);
+    font-family: Quantico, sans-serif;
 }
 
 /* header/nav styles */
 nav {
-    background-image: url('../project_assets/nav_sign.png');
+    background-image: url('../project_assets/nav-sign.svg');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -36,6 +39,7 @@ nav ul {
     gap: 2em;
     margin: 0;
     padding: 0;
+    font-family: Caveat, sans-serif;
 }
 nav ul li {
     list-style-type: none;
@@ -51,7 +55,7 @@ nav a {
     justify-content: center;
     align-items: center;
 }
-nav img {
+nav img, #footer-btn img {
     width: 1rem;
     padding-right: 3px;
     margin: auto;
@@ -65,8 +69,8 @@ main {
     background-color: var(--main);
     padding: .5rem;
     border-radius: 25px;
-    min-height: 100vh;
     margin: 0;
+    min-height: 100vh;
 }
 .hero {
     background: var(--accent);
@@ -77,6 +81,7 @@ main {
 .hero h1 {
     text-align: center;
     margin: auto;
+    font-family: Caveat, sans-serif;
 }
 h2 {
     margin: auto;
@@ -93,18 +98,25 @@ footer {
     margin-bottom: 0;
     padding: 2%;
 }
-footer button {
-    margin-bottom: 6vh;
-    background-color: #EFD2AA;
-    border: solid #AF663D;
+#footer-btn-contain {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+#footer-btn-contain a {
+    width: 30vw;
+}
+#footer-btn {
+    margin-bottom: 2%;
+    background-image: url(../project_assets/nav-sign.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
     border-radius: 6px;
     padding: 8px;
+    font-family: Caveat, sans-serif;
 }
-footer button a {
-    text-decoration: none;
-    color: var(--text)
-}
-
 
 
 /* media queries */
