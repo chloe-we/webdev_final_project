@@ -74,8 +74,13 @@ main {
     padding: .5rem 2rem;
     border-radius: 12px;
 }
+.hero h1 {
+    text-align: center;
+    margin: auto;
+}
 h2 {
-    margin: 2rem 1rem;
+    margin: auto;
+    text-align: center;
 }
 
 /* footer styles */
