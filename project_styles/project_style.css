@@ -85,7 +85,48 @@ main {
 }
 h2 {
     margin: auto;
+    margin-bottom: 2%;
+}
+#project-sect {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* project card styling */
+.project-flex-contain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+    width: 100%;
+    padding: 2%;
+    max-width: 900px;
+}
+.project-card {
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: var(--accent);
     text-align: center;
+    text-decoration: none;
+    color: var(--text);
+    flex: 0 0 100%; /* they don't shrink or grow and are always 90% of their container */
+    box-shadow: 3px 3px 10px black;
+}
+.project-card img {
+    width: 100%;
+}
+.project-card h3 {
+    padding: 1rem;
+    border-top: dashed 3px var(--main);
+}
+
+/* project page styles */
+.project-hero-img, .project-pg-full {
+    width: 100%;
+    border-radius: 15px;
 }
 
 /* footer styles */
@@ -117,7 +158,6 @@ footer {
     padding: 8px;
     font-family: Caveat, sans-serif;
 }
-
 
 /* media queries */
 @media (min-width: 400px) {
