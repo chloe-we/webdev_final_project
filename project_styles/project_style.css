@@ -247,6 +247,34 @@ footer {
     font-family: Caveat, sans-serif;
 }
 
+/* project page styles */
+
+/* grid styles */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+    padding: 2em;
+}
+.project-grid a {
+    text-decoration: none;
+}
+.project-grid-card {
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: var(--accent);
+    text-align: center;
+    color: var(--text);
+    box-shadow: 3px 3px 10px var(--shadow);
+}
+.project-grid-card img {
+    height: 50%;
+    width: 100%;
+}
+.project-grid-title {
+    padding: 1em;
+}
+
 /* media queries */
 @media (min-width: 400px) {
     nav a span {
