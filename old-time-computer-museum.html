@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project - The Lost Library</title>
+    <title>Project - Old-Time Computer Musuem</title>
 
     <!-- Favicon links -->
     <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
@@ -35,24 +35,26 @@
     <main>
         <!-- Content -->
         <div class="hero">
-            <h1>The Lost Library</h1>
+            <h1>Old-Time Computer Musuem</h1>
         </div>
 
-        <a href="project_assets/lost-library-header.png" target="_blank">
-            <img src="project_assets/lost-library-header.png" alt="Screenshot of the header and hero section" class="project-hero-img">
-        </a> 
+        <a href="project_assets/old-time-computer-museum-header.png" target="_blank">
+            <img src="project_assets/old-time-computer-museum-header.png" alt="Screenshot of the header and hero section" class="project-hero-img">
+        </a>
+
 
         <h2>A little about this project...</h2>
 
-        <p>This project marked my first experience working with media queries and exploring responsive design. With no specific design requirements, I leaned into a theme that reflects my own interests: the joy of reading, especially fantasy. I blended that passion with a dark academia aesthetic to create a site that feels like a cozy corner for elves, fairies, or anyone searching for their next favorite fantasy book.</p>
+        <p>This project gave me the chance to revisit working with HTML forms and, for the first time, explore styling them with CSS. I built a donation form using semantic HTML, ensuring that labels, inputs, and structure were accessible and meaningful. For the design, I experimented with a modern abstract aesthetic, leaning into bold colors and shapes to create a distinctive look. While it may not be my favorite style overall, I enjoyed how the color palette brought the design to life.</p>
+        <br>
 
-        <p>Technically, this was my first dive into responsive design, and I approached it from an unusual angle — adapting desktop-first code rather than starting mobile-first. While most modern workflows emphasize mobile-first design, this challenge gave me valuable insight into how responsiveness can be layered onto existing structures. It was both a creative experiment and a practical lesson in adapting code for different devices.</p>
+        <p>On the technical side, the page is fully responsive, adapting smoothly across different screen sizes. I also incorporated subtle button animations — particularly on the submit button — to enhance the user experience. Even though the animation isn't perfect, it adds a playful, interactive touch that makes the form feel more engaging. I plan to refine these animations further as I learn more advanced CSS techniques and even explore JavaScript-based animations in the future.</p>
 
         <h2>A Full Look</h2>
         
         <div class="full-look-contain">
-            <a href="project_assets/lost-library-fullpage.png" target="_blank">
-                <img src="project_assets/lost-library-fullpage.png" alt="Screenshot of the full website page" class="project-pg-full">
+            <a href="project_assets/old-time-computer-museum-fullpage.png" target="_blank">
+                <img src="project_assets/old-time-computer-museum-fullpage.png" alt="Screenshot of the full website page" class="project-pg-full">
             </a>
         </div>
 
@@ -65,7 +67,7 @@
 
             <!-- Thumbnail -->
             <div class="screenshot-gallery">
-                <img src="project_assets/lost-library-thumb-SE.png" alt="Mobile view on iPhone SE" class="thumbnail">
+                <img src="project_assets/old-time-computer-museum-thumb-12pro.png" alt="Mobile view on iPhone 12 Pro" class="thumbnail">
             </div>
 
             <!-- Lightbox Modal -->
@@ -76,7 +78,7 @@
             </div>
 
         </div>
-        
+
         <div>
             <h2>See it for Yourself</h2>
 
@@ -84,6 +86,7 @@
                 <a href="https://citw.lcc.edu/~westc23/exercise7.html" class="connect-link" target="_blank">Click Me!</a>
             </div>
         </div>
+        
 
     </main>
 
@@ -113,7 +116,7 @@
         // Open lightbox on click
         thumbnail.onclick = function() {
         lightbox.style.display = "block";
-        lightboxImg.src = this.src.replace("thumb-SE", "full-SE"); // swap to full-size image
+        lightboxImg.src = this.src.replace("thumb-12pro", "full-12pro"); // swap to full-size image
         captionText.innerHTML = this.alt;
         }
 

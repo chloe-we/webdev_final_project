@@ -132,6 +132,7 @@ h2 {
 #pfp {
     width: 100%;
     border-radius: 50%;
+    border: dashed 3px var(--accent);
 }
 #pfp-flex {
     display: flex;
@@ -148,9 +149,10 @@ h2 {
     text-decoration: none;
     background-color: var(--accent);
     color: var(--text);
-    padding: 2vw;
+    padding: 1em;
     border-radius: 8px;
     box-shadow: 0 3px 5px var(--shadow);
+    width: 15em;
 }
 .connect-link:hover {
     transform: scale(1.25);
@@ -160,6 +162,11 @@ h2 {
 .project-hero-img, .project-pg-full {
     width: 100%;
     border-radius: 15px;
+}
+.full-look-contain {
+    display: flex;
+    justify-content: flex-center;
+    padding: 1.5em;
 }
 .thumbnail {
   max-width: 200px;
