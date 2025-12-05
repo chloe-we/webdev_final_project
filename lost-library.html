@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project - The Lost Library</title>
+
+    <!-- Favicon links -->
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="manifest" href="site.webmanifest" />
+
+    <!-- Link to CSS -->
+    <link href="project_styles/project_style.css" rel="stylesheet">
+    <!-- Link to fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html"><img src="project_assets/home_icon.svg" alt="Home"><span>Home</span></a></li>
+                <li><a href="about.html"><img src="project_assets/about_icon.svg" alt="About"><span>About</span></a></li>
+                <li><a href="projects.html"><img src="project_assets/project_icon.svg" alt="Projects"><span>Projects</span></a></li>
+            </ul>
+        </nav> 
+    </header>
+
+    <main>
+        <!-- Content -->
+        <div class="hero">
+            <h1>The Lost Library</h1>
+        </div>
+
+        <a href="project_assets/lost-library-header.png" target="_blank">
+            <img src="project_assets/lost-library-header.png" alt="Screenshot of the header and hero section" class="project-hero-img">
+        </a>
+
+
+        <h2>A little about this project...</h2>
+
+        <p>This project marked my first experience working with media queries and exploring responsive design. With no specific design requirements, I leaned into a theme that reflects my own interests: the joy of reading, especially fantasy. I blended that passion with a dark academia aesthetic to create a site that feels like a cozy corner for elves, fairies, or anyone searching for their next favorite fantasy book.</p>
+
+        <p>Technically, this was my first dive into responsive design, and I approached it from an unusual angle — adapting desktop-first code rather than starting mobile-first. While most modern workflows emphasize mobile-first design, this challenge gave me valuable insight into how responsiveness can be layered onto existing structures. It was both a creative experiment and a practical lesson in adapting code for different devices.</p>
+
+        <h2>A Full Look</h2>
+
+        <a href="project_assets/lost-library-fullpage.png" target="_blank">
+            <img src="project_assets/lost-library-fullpage.png" alt="Screenshot of the full website page" class="project-pg-full">
+        </a>
+
+        <h2>Project Highlights</h2>
+
+        <div class="thumbnail-contain">
+            <p>It's responsive</p>
+
+            <p>(Click the image below to see more)</p>
+
+            <!-- Thumbnail -->
+            <div class="screenshot-gallery">
+                <img src="project_assets/lost-library-thumb-SE.png" alt="Mobile view on iPhone SE" class="thumbnail">
+            </div>
+
+            <!-- Lightbox Modal -->
+            <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-labelledby="caption">
+                <span class="close" role="button" aria-label="Close">&times;</span>
+                <img class="lightbox-content" id="lightbox-img" alt="">
+                <div id="caption"></div>
+            </div>
+
+        </div>
+        
+
+    </main>
+
+    <footer>
+        <div id="footer-btn-contain">
+            <a href="">
+                <div id="footer-btn">
+                    <img src="project_assets/return-to-top.svg" alt="Return to top">
+                </div>
+            </a>
+        </div>
+
+        <div id="footer-div">
+            <p>Designed and Developed by Chloe West | &copy; 2025</p>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script>
+        // Get elements
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = document.getElementById("lightbox-img");
+        const captionText = document.getElementById("caption");
+        const thumbnail = document.querySelector(".thumbnail");
+        const closeBtn = document.querySelector(".close");
+
+        // Open lightbox on click
+        thumbnail.onclick = function() {
+        lightbox.style.display = "block";
+        lightboxImg.src = this.src.replace("thumb-SE", "full-SE"); // swap to full-size image
+        captionText.innerHTML = this.alt;
+        }
+
+        // Close lightbox
+        closeBtn.onclick = function() {
+        lightbox.style.display = "none";
+        }
+
+        // Close when clicking outside image
+        lightbox.onclick = function(e) {
+        if (e.target === lightbox) {
+            lightbox.style.display = "none";
+        }
+        }
+    </script>
+</body>
+</html>

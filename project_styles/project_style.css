@@ -4,6 +4,8 @@
     --text: black;
     --bg: #DBDBDB;
     --accent: #E7EFC7;
+    --shadow: #313f32;
+    --modal-bg: rgb(168, 187, 163, .9);
 }
 
 /* mobile first styling */
@@ -113,7 +115,10 @@ h2 {
     text-decoration: none;
     color: var(--text);
     flex: 0 0 100%; /* they don't shrink or grow and are always 90% of their container */
-    box-shadow: 3px 3px 10px black;
+    box-shadow: 3px 3px 10px var(--shadow);
+}
+.project-card:hover {
+    transform: scale(102%);
 }
 .project-card img {
     width: 100%;
@@ -123,10 +128,86 @@ h2 {
     border-top: dashed 3px var(--main);
 }
 
+/* about page styles */
+#pfp {
+    width: 100%;
+    border-radius: 50%;
+}
+#pfp-flex {
+    display: flex;
+    justify-content: center;
+}
+#connect-contain {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1em;
+    padding-left: 1em;
+}
+.connect-link {
+    text-decoration: none;
+    background-color: var(--accent);
+    color: var(--text);
+    padding: 2vw;
+    border-radius: 8px;
+    box-shadow: 0 3px 5px var(--shadow);
+}
+.connect-link:hover {
+    transform: scale(1.25);
+}
+
 /* project page styles */
 .project-hero-img, .project-pg-full {
     width: 100%;
     border-radius: 15px;
+}
+.thumbnail {
+  max-width: 200px;
+  cursor: pointer;
+  border-radius: 15px;
+  box-shadow: 3px 3px 10px var(--shadow);
+}
+.thumbnail-contain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* modal overlay */
+.lightbox {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 999;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: var(--modal-bg);
+}
+.lightbox-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 80%;
+}
+#caption {
+  margin: 15px auto;
+  text-align: center;
+  color: var(--text);
+  font-size: 1rem;
+}
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: var(--text);
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+.close:hover {
+  color: var(--accent);
 }
 
 /* footer styles */
@@ -163,6 +244,9 @@ footer {
 @media (min-width: 400px) {
     nav a span {
         display: inline;
+    }
+    #pfp {
+        max-width: 390px;
     }
 }
 @media (min-width: 600px) {
